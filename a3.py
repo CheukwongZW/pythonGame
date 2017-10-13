@@ -88,6 +88,8 @@ class DotsApp:
         """
         self._master = master
 
+        master.title("Dots")
+
         self._playing = True
 
         self._image_manager = ImageManager('images/dots/', loader=load_image)
@@ -304,14 +306,14 @@ class DotsApp:
 def main():
     """Sets-up the GUI for Dots & Co"""
     # Write your GUI instantiation code here
-    pass
+    root = tk.Tk()
+    my_gui = DotsApp(root)
+    root.mainloop()
 
 
 if __name__ == "__main__":
     main()
 
-class InfoPanel:
+# class InfoPanel(tk.Frame):
 
-class IntervalBar:
-
-    
+# class IntervalBar:
